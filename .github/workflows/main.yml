@@ -46,4 +46,4 @@ jobs:
         run: aws --version
       
       - name: HELP ME AWS
-        run: aws help ec2
+        run: aws ec2 help
