@@ -48,9 +48,9 @@ jobs:
       - name: copy file via ssh password
         uses: appleboy/scp-action@master
         with:
-          host: 18.217.156.19
-          username: root
-          key_path: ./testForCICD/testingGithubAction.pem
-          port: 22
+          host: ${{secrets.TEST_AWS_HOST}}
+          username: ubuntu
+          key: ${{secrets.TEST_AWS_PEM}}
+          port: ${{secrets.TEST_AWS_PORT}}
           source: "."
           target: "."
